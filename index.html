@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form
+        class="questionnaire"
+        name="questionnaireForm"
+        method="POST"
+        action=""
+      >
+        <div class="title-container">
+          <span class="title-text"
+            >Какую процедуру Вы бы хотели пройти в нашей клинике?</span
+          >
+          <span class="error">
+            Для получения персональной скидки, пожалуйста, заполните поля
+          </span>
+        </div>
+        <fieldset name="clinicalProcedures">
+          <label class="custom-checkbox">
+            <input type="checkbox" value="фотоомоложение" />
+            <span>фотоомоложение</span>
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" value="RecoSMA" />
+            <span>RecoSMA</span>
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" value="наноперфорация" />
+            <span>наноперфорация</span>
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" value="SMAS -омоложение" />
+            <span>SMAS -омоложение</span>
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" value="инъекции красоты" />
+            <span>инъекции красоты</span>
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" value="spa релакс" />
+            <span>spa релакс</span>
+          </label>
+        </fieldset>
+
+        <div class="title-container">
+          <span class="title-text">Вы бы записывались на процедуры:</span>
+          <span class="error">
+            Для получения персональной скидки, пожалуйста, заполните поля
+          </span>
+        </div>
+        <fieldset name="procedureTime">
+          <label>
+            <input type="checkbox" value="в 9:00" /><span>в 9:00</span>
+          </label>
+          <label>
+            <input type="checkbox" value="в 19:00" /><span>в 19:00</span>
+          </label>
+          <label>
+            <input type="checkbox" value="в 20:00" /><span>в 20:00</span>
+          </label>
+        </fieldset>
+
+        <div class="title-container">
+          <span class="title-text">Что вам нравится в нашей клинике?</span>
+          <span class="error">
+            Для получения персональной скидки, пожалуйста, заполните поля
+          </span>
+        </div>
+        <fieldset name="whatYouLike">
+          <textarea
+            class="text-area"
+            type="text"
+            id="clinic-feedback"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </fieldset>
+
+        <div class="title-container">
+          <span class="title-text">Что вам не нравится в нашей клинике?</span>
+          <span class="error">
+            Для получения персональной скидки, пожалуйста, заполните поля
+          </span>
+        </div>
+        <fieldset name="whatYouDislike">
+          <textarea
+            class="text-area"
+            type="text"
+            id="clinic-feedback"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </fieldset>
+
+        <div class="title-container">
+          <span class="title-text"
+            >Порекомендовали бы вы нашу клинику своим знакомым?</span
+          >
+          <span class="error">
+            Для получения персональной скидки, пожалуйста, заполните поля
+          </span>
+        </div>
+        <fieldset name="recommendOrNot">
+          <label for="recommendYes">
+            <input
+              type="radio"
+              name="recommendation"
+              id="recommendYes"
+              value="yes"
+            />
+            <span>Да</span>
+          </label>
+          <label for="recommendNo">
+            <input
+              type="radio"
+              name="recommendation"
+              id="recommendNo"
+              value="no"
+            />
+            <span>Нет</span>
+          </label>
+        </fieldset>
+
+        <div class="title-container">
+          <span class="title-text"
+            >На какую процедуру Вы хотите использовать свою скидку?</span
+          >
+          <span class="error">
+            Для получения персональной скидки, пожалуйста, заполните поля
+          </span>
+        </div>
+        <fieldset name="procedureDiscount">
+          <textarea
+            class="text-area"
+            type="text"
+            id="procedure-discount"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </fieldset>
+
+        <div class="sub-form">
+          <div class="contacts">
+            <div class="contacts__container">
+              <div class="title-container">
+                <span class="error"> Пожалуйста, заполните ФИО </span>
+              </div>
+              <fieldset class="userContacts name" name="userName">
+                <input
+                  class="contacts__name"
+                  id="name"
+                  type="text"
+                  placeholder="Ваши имя и фамилия"
+                  maxlength="50"
+                />
+              </fieldset>
+            </div>
+
+            <div class="contacts__container">
+              <div class="title-container">
+                <span class="error"> Пожалуйста, заполните телефон </span>
+              </div>
+              <fieldset class="userContacts phone" name="userPhone">
+                <input
+                  class="contacts__phone"
+                  id="phone"
+                  type="tel"
+                  placeholder="+7 (_ _ _) _ _  _ _"
+                />
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="title-container">
+            <span class="error">
+              Для получения персональной скидки, пожалуйста, заполните поля
+            </span>
+          </div>
+          <fieldset class="userAgreement" name="userAgreement">
+            <label class="personal-agreement">
+              <input type="checkbox" /><span
+                >Нажимая «Отправить» вы даете свое согласие на обработку своих
+                персональных данный</span
+              >
+            </label>
+          </fieldset>
+
+          <div class="submit-button">
+            <input
+              class="submit"
+              type="submit"
+              value="Отправить и получить скидку"
+            /><span
+              >Внимание! Срок действия индивидуальной скидки — в течение 2-х
+              недель с момента отправления заявки</span
+            >
+          </div>
+          <div class="thank-phrase">
+            <div class="thank-phrase__img">
+              <img src="./utils/img/kavichka.svg" alt="кавычка" />
+            </div>
+            <div class="thank-phrase__text">
+              <p>
+                Спасибо за участие в нашем опросе. Нам важно Ваше мнение. <br />
+                Вас ждет скидка 10% на любую услугу.
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+    <!-- Подключение jQuery плагина Masked Input -->
+    <script src="./jquery.maskedinput.min.js"></script>
+    <!-- Маска для телефона -->
+    <script>
+      $(function () {
+        $("#phone").mask("+7(999) 999-9999");
+      });
+    </script>
+  </body>
+</html>
